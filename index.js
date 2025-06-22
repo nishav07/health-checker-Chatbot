@@ -3,6 +3,13 @@ require('dotenv').config();
 const OpenAI = require('openai');
 const app = express();
 const port = 3000;
+
+
+app.use(express.urlencoded({ extended:true }));
+app.set("view engine" , "ejs");
+app.set("views" , path.join(__dirname , "views"));
+app.use(express.static(path.join(__dirname , "public")));
+
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
@@ -22,10 +29,10 @@ app.get("/", async (req, res) => {
   }
 });
 
-
 app.get("/home" , (req,res) => {
   res.send("this is home")
 })
+
 app.listen(port, () => {
   console.log(`app listen at port ${port}`);
 })

@@ -22,6 +22,10 @@ app.get("/", async (req, res) => {
   }
 });
 
+
+app.get("/home" , (req,res) => {
+  res.send("this is home")
+})
 app.listen(port, () => {
   console.log(`app listen at port ${port}`);
 })

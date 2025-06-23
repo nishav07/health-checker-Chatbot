@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname , "public")));
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
-app.get("/", async (req, res) => {
+app.get("/lol", async (req, res) => {
   try {
     const completion = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
@@ -30,7 +30,7 @@ app.get("/", async (req, res) => {
 });
 
 app.get("/home" , (req,res) => {
-  res.send("this is home")
+  res.render("home")
 })
 
 app.listen(port, () => {

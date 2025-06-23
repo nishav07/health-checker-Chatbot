@@ -30,7 +30,7 @@ app.get("/lol", async (req, res) => {
 });
 
 app.get("/home" , (req,res) => {
-  res.render("home")
+  res.render("home.ejs")
 })
 
 app.listen(port, () => {

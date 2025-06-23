@@ -3,7 +3,7 @@ require('dotenv').config();
 const OpenAI = require('openai');
 const app = express();
 const port = 3000;
-
+const path = require("path");
 
 app.use(express.urlencoded({ extended:true }));
 app.set("view engine" , "ejs");

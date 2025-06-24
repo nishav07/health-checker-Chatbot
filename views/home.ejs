@@ -25,20 +25,14 @@
             scroll-behavior: smooth;
         }
 
-        .navbar {
-            position: fixed;
-            top: 0;
+        #navbar {
             width: 100%;
-            background-color:blanchedalmond;
+            background-color:rgb(246, 181, 83);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
             z-index: 1000;
             transition: all 0.3s ease;
             }
 
-        .navbar.scrolled {
-            box-shadow: 0 2px 20px var(--shadow-light);
-        }
 
         .nav-container {
             max-width: 1200px;
@@ -91,13 +85,20 @@
         }
 
         main{
-            width: 100%;
-            position: fixed;
+            padding: 20px;
+            background-color: rgb(243, 205, 159);
         }
+
+        /* .container{
+            max-width:1200px;
+            margin: 0 auto;
+            padding:0 20px;
+            background-color: bisque;
+        } */
     </style>
 </head>
 <body>
-    <nav id="nav">
+    <nav id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="#">Healthy AI</a>

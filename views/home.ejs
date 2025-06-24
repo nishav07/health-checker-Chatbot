@@ -37,7 +37,7 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 1.25rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -56,45 +56,55 @@
         .nav-menu {
             display: flex;
             list-style: none;
+            gap: 3rem;
+            list-style:none;
             margin: 0;
             padding: 0;
             outline: none;
             text-decoration: none;
         }
 
-        .nav-menu ul li{
+        /* .nav-menu li{
             list-style: none;
-        }
+        } */
 
-        .nav-menu ul li a{
+        .nav-menu li a{
             color: black;
             outline: none;
             text-decoration: none;
             transition: all 0.3s ease;
         }
 
-        .nav-menu ul{
-            width:10rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
 
-        .nav-menu ul li a:hover{
+        .nav-menu li a:hover{
             border-bottom: 3px solid blue;
         }
 
         main{
-            padding: 20px;
-            background-color: rgb(243, 205, 159);
+            padding: 1.25rem;
+            background-color: rgb(136, 116, 92);
         }
 
-        /* .container{
+        .container{
             max-width:1200px;
             margin: 0 auto;
-            padding:0 20px;
-            background-color: bisque;
-        } */
+            padding:0 1.25rem;
+            background-color: rgb(246, 199, 142);
+            display: flex;
+        }
+
+        .left-container{
+            min-width:12.5rem;
+            max-width: 25rem;
+            background-color: hotpink;
+            flex: 1;
+        }
+        
+        .right-conatiner{
+            background-color: hotpink;
+            flex: 2;
+            background-color: beige;
+        }
     </style>
 </head>
 <body>
@@ -104,12 +114,10 @@
                 <a href="#">Healthy AI</a>
             </div>
 
-            <div class="nav-menu">
-                <ul>
+                <ul class="nav-menu">
                     <li><a href="#">Newchat</a></li>
                     <li><a href="#">Login</a></li>
                 </ul>
-            </div>
 
             <!-- <div class="humburger">
                 <span id="bar">New chat</span>
@@ -120,8 +128,8 @@
 
 
     <main id="main">
-        <div class="containers">
-           <div class="left-conatiner"></div> 
+        <div class="container">
+           <div class="left-container"></div> 
            <div class="right-container"></div>
         </div>
     </main>

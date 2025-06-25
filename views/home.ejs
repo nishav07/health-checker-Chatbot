@@ -114,16 +114,19 @@
             padding: 1rem;
             height: 100%;
             background-color: rgb(202, 173, 229);
-            /* display: flex;
-            align-items: center;
-            justify-content: center; */
+            display: flex;
+            align-items:flex-start;
+            /* justify-content:space-between; */
+            gap: 1rem;
+            flex-direction: column;
         }
 
         .inner-nav{
             height: 3rem;
+            width: 100%;
             display: flex;
+            align-items:center;
             justify-content: space-between;
-            align-items: center;
         }
 
         .inner-nav i{
@@ -139,6 +142,11 @@
             gap: 1rem;
         }
 
+        .chat-bar{
+            flex: 1;
+            overflow-y: scroll;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -188,11 +196,10 @@
                 </div>
 
                 <div class="chat-bar">
-                    <p>hello</p>
-                    <p>bolo</p>
-                    <p>mello</p>
-                    <p>dolo</p>
-                    <p>milo</p>
+                    <div class="chats">
+                        <span>Late night talk</span>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
                 </div>
             </div>
            </div> 

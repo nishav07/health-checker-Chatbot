@@ -82,28 +82,31 @@
 
         main{
             padding: 1.25rem;
-            background-color: rgb(136, 116, 92);
+            height: calc(100vh - 70px);
         }
 
         .container{
             max-width:1200px;
+            height: 100%;
             margin: 0 auto;
             padding:0 1.25rem;
-            background-color: rgb(246, 199, 142);
             display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
         }
 
         .left-container{
             min-width:12.5rem;
             max-width: 25rem;
-            background-color: hotpink;
+            background-color: rgb(238, 216, 227);
             flex: 1;
+            height: 100%;
         }
         
-        .right-conatiner{
-            background-color: hotpink;
+        .right-container{
             flex: 2;
-            background-color: beige;
+            background-color: rgb(221, 221, 140);
+            height: 100%;
         }
     </style>
 </head>

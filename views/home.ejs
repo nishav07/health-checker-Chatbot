@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         *{
             margin: 0px;
@@ -113,7 +114,31 @@
             padding: 1rem;
             height: 100%;
             background-color: rgb(202, 173, 229);
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
         }
+
+        .inner-nav{
+            height: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .inner-nav i{
+            font-size:1.8rem;
+        }
+
+        .inner-options{
+            height:8rem;
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
     </style>
 </head>
 <body>
@@ -139,7 +164,37 @@
     <main id="main">
         <div class="container">
            <div class="left-container">
-            <div class="inner-container"></div>
+            <div class="inner-container">
+                <div class="inner-nav">
+                    <h1>logo</h1>
+                    <i class="fa-regular fa-square-minus"></i>
+                </div>
+
+                <div class="inner-options">
+                    <div class="options">
+                        <i class="fa-brands fa-rocketchat"></i>
+                        <span>Newchat</span>
+                    </div>
+
+                    <div class="options">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>Search chat</span>
+                    </div>
+
+                    <div class="options">
+                        <i class="fa-solid fa-server"></i>
+                        <span>Newchat</span>
+                    </div>
+                </div>
+
+                <div class="chat-bar">
+                    <p>hello</p>
+                    <p>bolo</p>
+                    <p>mello</p>
+                    <p>dolo</p>
+                    <p>milo</p>
+                </div>
+            </div>
            </div> 
            <div class="right-container"></div>
         </div>

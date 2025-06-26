@@ -171,6 +171,40 @@
             font-size: 1.5rem;
         }
 
+
+        .inner-container2{
+            padding: 1rem 3rem;
+            height: 100%;
+            background-color: rgb(202, 173, 229);
+            display: flex;
+            align-items:flex-start;
+            /* justify-content:space-between; */
+            gap: 1rem;
+            flex-direction: column;
+        }
+
+        .nav-of-chat{
+            /* height: 3rem; */
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+        }
+
+        .option-of-chat{
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        .option-of-chat a{
+            color: black;
+        }
+
     </style>
 </head>
 <body>
@@ -197,10 +231,13 @@
         <div class="container">
            <div class="left-container">
             <div class="inner-container">
+
+
                 <div class="inner-nav">
                     <h1>logo</h1>
                     <i class="fa-regular fa-square-minus"></i>
                 </div>
+
 
                 <div class="inner-options">
                     <div class="options">
@@ -218,6 +255,7 @@
                         <span>Newchat</span>
                     </div>
                 </div>
+
 
                 <div class="chat-bar">
                     <div class="chats">
@@ -242,7 +280,22 @@
                 </div>
             </div>
            </div> 
-           <div class="right-container"></div>
+
+
+
+           <div class="right-container">
+            <div class="inner-container2">
+                <div class="nav-of-chat">
+                    <h1>logo</h1>
+
+                    <ul class="option-of-chat">
+                        <li><a href="#"><i class="fa-solid fa-arrow-up-from-bracket"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+           </div>
         </div>
     </main>
 

@@ -221,11 +221,24 @@
         }
 
         .input-area{
-            flex: 1;
+            min-height:4rem;
+            max-height:10rem;
             background-color: beige;
+            padding: 1rem;
+            width: 100%;
+            border-radius: 2rem;
         }
+
         #prompt{
             resize: none;
+            height: auto;
+            min-height: 2rem;
+            max-height: 8rem;
+            overflow-y: auto;
+            width: 100%;
+            padding: 0.5rem;
+            outline: none;
+            border: none;
         }
     </style>
 </head>
@@ -323,7 +336,7 @@
                 </div>
 
                 <div class="input-area">
-                    <textarea name="prompt" id="prompt"></textarea>
+                    <textarea name="prompt" id="prompt" placeholder="Ask any shit"></textarea>
                 </div>
             </div>
            </div>

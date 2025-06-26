@@ -13,12 +13,13 @@ app.use(express.static(path.join(__dirname , "public")));
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
-app.get("/lol", async (req, res) => {
+app.get("/index", async (req, res) => {
   try {
     const completion = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
       messages: [
-        { role: "user", content: "write a haiku about AI"}
+        { role: "system" , content: "you're a doctor who is polite and talk in english and you can suggest medicines"},
+        { role: "user", content: "pet mai dard hai"}
       ]
     });
 

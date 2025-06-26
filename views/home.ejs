@@ -216,8 +216,17 @@
         .chat-area{
             flex: 2;
             background-color: aqua;
+            width: 100%;
+            overflow-y: auto;
         }
 
+        .input-area{
+            flex: 1;
+            background-color: beige;
+        }
+        #prompt{
+            resize: none;
+        }
     </style>
 </head>
 <body>
@@ -311,6 +320,10 @@
                 <div class="chat-area">
                     <div class="msg-user">mera pet dard kr rha hai kay kru</div>
                     <div class="msg-ai">ajwain khaa le sale</div>
+                </div>
+
+                <div class="input-area">
+                    <textarea name="prompt" id="prompt"></textarea>
                 </div>
             </div>
            </div>

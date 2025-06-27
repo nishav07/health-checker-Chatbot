@@ -109,6 +109,8 @@
         }
         
         .right-container{
+            display: flex;
+            flex-direction:column;
             flex: 2;
             background-color: rgb(221, 221, 140);
             height: 100%;
@@ -214,24 +216,36 @@
         }
 
         .chat-area{
+            height: 100%;
             flex: 2;
             background-color: aqua;
             width: 100%;
             overflow-y: auto;
             display: flex;
-            /* align-items: center;
-            justify-content: center; */
+            /* align-items: center; */
+            justify-content:flex-end;
             flex-direction: column;
+            gap: 1rem;
         }
 
         .msg-user{
             display: flex;
             width: 40%;
             padding: 1rem;
-            background-color: rgb(250, 219, 175);
+            background-color: rgb(216, 250, 175);
             border-radius: 1rem;
             align-self:flex-end;
         }
+
+        .msg-ai{
+            display: flex;
+            width: 60%;
+            padding: 1rem;
+            background-color: rgb(250, 175, 245);
+            border-radius: 1rem;
+            align-self:flex-start;
+        }
+
         .input-area{
             min-height:4rem;
             max-height:10rem;
@@ -359,6 +373,13 @@
                 <div class="chat-area">
                     <div class="msg-user">mera pet dard kr rha hai kay kru</div>
                     <div class="msg-ai">ajwain khaa le sale</div>
+                    <div class="msg-user">abee aii hai to kya tu aise bat krega</div>
+                    <div class="msg-ai">galat kay bola ajwain gas nikal ke tujhe hydrogen baloon bana dega</div>
+                    <div class="msg-user">abee bhakk chaty</div>
+                    <div class="msg-ai">aree yaar</div>
+                    <div class="msg-ai">galat kay bola ajwain gas nikal ke tujhe hydrogen baloon bana dega</div>
+                    <div class="msg-user">abee bhakk chaty</div>
+                    <div class="msg-ai">aree yaar</div>
                 </div>
 
                 <div class="input-area">

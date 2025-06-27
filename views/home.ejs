@@ -382,18 +382,18 @@
 
                 <div class="chat-area">
                    
-                <div class="msg-user">mera pet dard kr rha hai kay kru</div>
+                <!-- <div class="msg-user">mera pet dard kr rha hai kay kru</div>
                 <div class="msg-ai">ajwain khaa le sale</div>
                 <div class="msg-user">abee aii hai to kya tu aise bat krega</div>
-                <div class="msg-ai">aree yaar</div>
+                <div class="msg-ai">aree yaar</div> -->
                     
 
                 </div>
 
                 <div class="input-area">
-                    <form id="input-field" action="">
+                    <form id="input-field">
                         <textarea name="prompt" id="prompt" placeholder="Ask any shit"></textarea>
-                        <button><i class="fa-solid fa-paper-plane"></i></button>
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
@@ -403,12 +403,36 @@
 
 
 
+    <script>
+        let form = document.getElementById("input-field").addEventListener("submit", async function(e){
+        e.preventDefault();
+
+        let userInput = document.querySelector("#prompt").value;
+        userMsg(userInput);
+
+        const res = await fetch("/get-reply" , {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ msg: userInput })
+        })
+
+        const data = await res.json();
 
 
+        });
 
 
+        function userMsg(text) {
+            let chatBox = document.querySelector(".chat-area");
+            let div = document.createElement("div");
+            div.setAttribute("class" , "msg-user")
+            div.innerHTML = text;
+            chatBox.append(div);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
 
-
-
+    </script>
 </body>
 </html>

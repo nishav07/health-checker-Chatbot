@@ -420,6 +420,7 @@
 
         const data = await res.json();
 
+        document.querySelector("#prompt").value = "";
 
         });
 
@@ -433,6 +434,14 @@
             chatBox.scrollTop = chatBox.scrollHeight;
         }
 
+        function aiMsg(text) {
+            let chatBox = document.querySelector(".chat-area");
+            let div = document.createElement("div");
+            div.setAttribute("class" , "msg-ai")
+            div.innerHTML = text;
+            chatBox.append(div);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
     </script>
 </body>
 </html>

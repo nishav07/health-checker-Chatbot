@@ -30,9 +30,28 @@ app.get("/index", async (req, res) => {
   }
 });
 
+//--------------------------------------prototype of chats ye udhanan hai------------------------------------------------------
+
+const chatData = [
+  { role: "user", message: "Hey AI, I'm not feeling well." },
+  { role: "ai", message: "I'm here to help. Can you describe your symptoms?" },
+  { role: "user", message: "Yeah, I've been coughing and feeling feverish." },
+  { role: "ai", message: "Sounds like you might have a viral infection." },
+  { role: "user", message: "Should I take any medicines?" },
+  { role: "ai", message: "You can take paracetamol for the fever and stay hydrated." },
+  { role: "user", message: "Okay, and what should I eat?" },
+  { role: "ai", message: "Stick to light, easy-to-digest food like khichdi and soup." },
+  { role: "user", message: "Thanks AI, you're actually helpful!" },
+  { role: "ai", message: "Anytime! Get well soon 💪" }
+];
+
+console.log(chatData[3].message)
+//-----------------------------------------------------------------------------------------------------------------------
+
 app.get("/home" , (req,res) => {
-  res.render("home.ejs")
+  res.render("home.ejs" , { chatData })
 })
+
 
 app.listen(port, () => {
   console.log(`app listen at port ${port}`);

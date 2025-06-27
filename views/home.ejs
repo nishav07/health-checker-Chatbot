@@ -381,7 +381,20 @@
                 </div>
 
                 <div class="chat-area">
-                    <div class="msg-user">mera pet dard kr rha hai kay kru</div>
+                    <% (chatData.forEach(data => { %>
+                    <%    if (data.role === "user") {      %>
+                            <div class="msg-user" ><%= data.message %></div>
+                       <% } else { %>
+                            <div class="msg-ai"><%= data.message %></div>
+                        <% } %>
+                   <% })) %> 
+                
+                    
+
+
+
+
+                    <!-- <div class="msg-user">mera pet dard kr rha hai kay kru</div>
                     <div class="msg-ai">ajwain khaa le sale</div>
                     <div class="msg-user">abee aii hai to kya tu aise bat krega</div>
                     <div class="msg-ai">galat kay bola ajwain gas nikal ke tujhe hydrogen baloon bana dega</div>
@@ -389,7 +402,7 @@
                     <div class="msg-ai">aree yaar</div>
                     <div class="msg-ai">galat kay bola ajwain gas nikal ke tujhe hydrogen baloon bana dega</div>
                     <div class="msg-user">abee bhakk chaty</div>
-                    <div class="msg-ai">aree yaar</div>
+                    <div class="msg-ai">aree yaar</div> -->
                 </div>
 
                 <div class="input-area">

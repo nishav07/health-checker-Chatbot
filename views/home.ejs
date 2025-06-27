@@ -382,10 +382,6 @@
 
                 <div class="chat-area">
                    
-                <!-- <div class="msg-user">mera pet dard kr rha hai kay kru</div>
-                <div class="msg-ai">ajwain khaa le sale</div>
-                <div class="msg-user">abee aii hai to kya tu aise bat krega</div>
-                <div class="msg-ai">aree yaar</div> -->
                     
 
                 </div>
@@ -410,7 +406,7 @@
         let userInput = document.querySelector("#prompt").value;
         userMsg(userInput);
 
-        const res = await fetch("/get-reply" , {
+        const res = await fetch("/chat" , {
             method: "POST",
             headers: {
             "Content-Type": "application/json"
@@ -419,8 +415,9 @@
         })
 
         const data = await res.json();
-
-        document.querySelector("#prompt").value = "";
+        let aiReply = data.reply;
+        aiMsg(aiReply)
+        console.log(aiReply);
 
         });
 
@@ -431,6 +428,7 @@
             div.setAttribute("class" , "msg-user")
             div.innerHTML = text;
             chatBox.append(div);
+            document.querySelector("#prompt").value = "";
             chatBox.scrollTop = chatBox.scrollHeight;
         }
 

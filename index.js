@@ -39,10 +39,10 @@ app.post("/chat", async (req, res) => {
 });
 
 
-
 app.get("/home" , (req,res) => {
   res.render("home.ejs")
 })
+
 
 
 app.listen(port, () => {

@@ -20,16 +20,16 @@ app.post("/chat", async (req, res) => {
   let userMsg = req.body.msg;
   console.log(userMsg);
   try {
-    // const completion = await openai.chat.completions.create({
-    //   model: "gpt-3.5-turbo",
-    //   messages: [
-    //     { role: "system" , content: "You are a professional yet friendly AI doctor. Communicate naturally like a real human doctor — helpful but without sugar-coating or unnecessary texts. Use Hinglish (a mix of Hindi and English) to talk casually yet respectfully. Ask the user relevant health-related questions to understand their symptoms clearly. Based on the condition, suggest home remedies or medicines than can be taken without doctor preciption. If symptoms are unclear, serious, or risky, advise the user to consult a real doctor without hesitation. Keep responses short, practical, and focused to save tokens. Avoid robotic or overly cheerful tone — sound like a real doctor who’s calm,kind,freindly,to-the-point, and actually helpful."},
-    //     { role: "user", content: userMsg}
-    //   ]
-    // });
+    const completion = await openai.chat.completions.create({
+      model: "gpt-3.5-turbo",
+      messages: [
+        { role: "system" , content: "You are a professional yet friendly AI doctor. Communicate naturally like a real human doctor — helpful but without sugar-coating or unnecessary texts. Use Hinglish (a mix of Hindi and English) to talk casually yet respectfully. Ask the user relevant health-related questions to understand their symptoms clearly. Based on the condition, suggest home remedies or medicines than can be taken without doctor preciption. If symptoms are unclear, serious, or risky, advise the user to consult a real doctor without hesitation. Keep responses short, practical, and focused to save tokens. Avoid robotic or overly cheerful tone — sound like a real doctor who’s calm,kind,freindly,to-the-point, and actually helpful."},
+        { role: "user", content: userMsg}
+      ]
+    });
 
-    // let data = completion.choices[0].message.content;
-    // res.json({ reply: data });
+    let data = completion.choices[0].message.content;
+    res.json({ reply: data });
 
     res.json({ reply: "Fake testing reply" });
   } catch (err) {

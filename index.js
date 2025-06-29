@@ -1,6 +1,5 @@
 const express = require('express');
 require('dotenv').config();
-// const fetch = require('node-fetch');
 const axios = require('axios');
 const app = express();
 const port = 3000;
@@ -13,9 +12,6 @@ app.use(express.static(path.join(__dirname , "public")));
 
 const chatData = [];
 
-// const openai = new OpenAI({
-//   apiKey: process.env.OPENAI_API_KEY
-// });
 
 app.post("/chat", async (req, res) => {
   let userMsg = req.body.msg;
@@ -32,18 +28,6 @@ app.post("/chat", async (req, res) => {
   ];
   
   try {
-    // const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-    //   method: "POST",
-    //   headers: {
-    //     "Authorization": `Bearer ${process.env.groq_api_key}`,
-    //     "Content-Type": "application/json"
-    //   },
-    //   body: JSON.stringify({
-    //     model: "llama3-70b-8192",
-    //     messages: messages
-    //   })
-    // });
-
     const APIres = await axios.post("https://api.groq.com/openai/v1/chat/completions", {
       model: "llama3-70b-8192",
       messages: messages
@@ -54,11 +38,9 @@ app.post("/chat", async (req, res) => {
       }
     });
 
-    // const data = await res.json();
     const reply = APIres.data.choices[0].message.content;
     chatData.push({ role: "assistant", content: reply });
     res.json({ reply });
-    // res.json({ reply: "Fake testing reply" });
   } catch (err) {
     console.error("AI error:", err);
     res.status(500).json({ reply: "Server se error aayi hai, try again later." });

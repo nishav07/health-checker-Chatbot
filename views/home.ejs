@@ -6,6 +6,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+
+    :root{
+        --lightBackground:#fefae0;
+        --backShadow:#faedcd;
+        --font:#d4a373;
+        --secBackground:#ccd5ae;
+        --secBackshadow:#e9edc9;
+    }
+
         *{
             margin: 0px;
             padding: 0px;
@@ -24,8 +33,7 @@
         body{
             font-family: 'Poppins', sans-serif;
             line-height: 1.2;
-            color: var(--text-primary);
-            background-color: var(--bg-primary);
+            background-color: var(--lightBackground);
             transition: all 0.3s ease;
             height: 100%;
         }
@@ -38,7 +46,7 @@
 
         #navbar {
             width: 100%;
-            background-color:rgb(246, 181, 83);
+            background-color:var(--lightBackground);
             backdrop-filter: blur(10px);
             z-index: 1000;
             transition: all 0.3s ease;
@@ -53,7 +61,6 @@
             justify-content: space-between;
             align-items: center;
             height: 70px;
-            background-color: aqua;
         }
 
         .nav-logo a {
@@ -62,6 +69,7 @@
             outline: none;
             text-decoration: none;
             transition: color 0.3s ease;
+            color: var(--font);
         }
 
         .nav-menu {
@@ -75,21 +83,13 @@
             text-decoration: none;
         }
 
-        /* .nav-menu li{
-            list-style: none;
-        } */
-
+        
         .nav-menu li a{
-            color: black;
+            color: var(--font);
             outline: none;
-            text-decoration: none;
-            transition: all 0.3s ease;
         }
 
 
-        .nav-menu li a:hover{
-            border-bottom: 3px solid blue;
-        }
 
         main{
             padding: 1.25rem;
